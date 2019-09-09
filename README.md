@@ -84,3 +84,24 @@ coming from a server-side to a number, tryParse method comes in handy. Take a lo
     String parseC = double.tryParse(c); // result is null (that string contains invalid number)
     String parseD = double.tryParse(d); // result is null (that string contains invalid number)
  ```
+
+  ## List(Arrays)
+
+Perhaps the most common collection in nearly every programming language is the array or ordered set of objects. Please note that Dart arrays are Lists.
+
+###  Example
+
+ ```dart
+    var numList = [1,2,3,5,6,7];
+    var countryList = ["Nigeria","United States","United Kingdom","Ghana","IreLand","Germany"];
+    String numLength = numList.length; // result is 6
+    String countryLength = countryList.length; // result is 6
+    String countryIndex = countryList[1]; // result is 'United States'
+    String numIndex = numList[0]; // result is 1
+
+    countryList.add("Poland"); // Adds a new item to the list.
+
+    var emailList = new List(3); // Set a fixed list size 
+    var emailList = new List<String>(); // instance of a list of type String
+
+ ```
