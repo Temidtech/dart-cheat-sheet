@@ -65,4 +65,4 @@ variables or passed as args to other functions. Interestingly, you can also call
     int length(String text) => return text.length; // returns length of text
  ```
 
- The above is application where functions contain just ONE expression. This is also referred to as shorthand syntax.
+ The above approach is applicable where functions contain just ONE expression. This is also referred to as shorthand syntax.
