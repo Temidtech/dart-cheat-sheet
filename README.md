@@ -66,3 +66,21 @@ variables or passed as args to other functions. Interestingly, you can also call
  ```
 
  The above approach is applicable where functions contain just ONE expression. This is also referred to as shorthand syntax.
+
+ ## Parsing
+
+Parsing a string a number such as integer and double is very key. As a developer, sometimes I want to be able to convert(parse) a string value
+coming from a server-side to a number, this method comes in handy. Take a look at this code snippet:
+
+###  Example
+
+ ```dart
+    var a = "121";
+    var b = "120.56";
+    var c = "100.a12";         
+    var d = "abc";
+    String parseA = int.tryParse(a); // result is 121
+    String parseB = double.tryParse(b); // result is 120.56
+    String parseC = double.tryParse(c); // result is null (that string contains invalid number)
+    String parseD = double.tryParse(d); // result is null (that string contains invalid number)
+ ```
