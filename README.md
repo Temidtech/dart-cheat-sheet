@@ -38,3 +38,31 @@ Every language has it's own way of interpolating two ore more words or character
     String upperCase = '${"hello".toUpperCase()}'; // result is HELLO
     String concatXY = '$x$y'; // result is '62'
  ```
+
+ ## Functions
+Dart lang is an OOL(Object-oriented language), In this language, functions are objects and have a type, Function. This implies that functions can be assigned to 
+variables or passed as args to other functions. Interestingly, you can also call an instance of a class as if it were a fuction. That's awesome right?
+
+###  Example
+
+ ```dart
+    String fullName(){
+        String firstName = "Temidayo";
+        String lastName = "Adefioye";
+        return '$firstName $lastName'; // returns 'Temidayo Adefioye'
+    }
+ ```
+
+ ```dart
+    int length(String text){
+        return text.length; // returns length of text
+    }
+ ```
+
+ The above function can be rewritten in a more concise way:
+
+  ```dart
+    int length(String text) => return text.length; // returns length of text
+ ```
+
+ The above is application where functions contain just ONE expression. This is also referred to as shorthand syntax.
