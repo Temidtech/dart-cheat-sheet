@@ -85,7 +85,7 @@ coming from a server-side to a number, tryParse method comes in handy. Take a lo
     String parseD = double.tryParse(d); // result is null (that string contains invalid number)
  ```
 
-  ## List(Arrays)
+  ## List Arrays
 
 Perhaps the most common collection in nearly every programming language is the array or ordered set of objects. Please note that Dart arrays are Lists.
 
