@@ -8,7 +8,7 @@ A curated list of awesome stuff needed to get started with your flutter developm
 - [String interpolation](#string-interpolation)
 - [Functions](#functions)
 - [Parsing](#parsing)
-- [List(Arrays)](#list-arrays)
+- [List Arrays](#list-arrays)
 - [Lambda Functions](#lambda-functions)
 - [Null-aware Operators](#null-aware-operators)
 - [Collections Literals](#collections-literals)
