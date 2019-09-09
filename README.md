@@ -69,8 +69,8 @@ variables or passed as args to other functions. Interestingly, you can also call
 
  ## Parsing
 
-Parsing a string a number such as integer and double is very key. As a developer, sometimes I want to be able to convert(parse) a string value
-coming from a server-side to a number, this method comes in handy. Take a look at this code snippet:
+Parsing a string to a number such as integer and double is very key. As a developer, often times I need to convert(parse) a string value
+coming from a server-side to a number, tryParse method comes in handy. Take a look at this code snippet:
 
 ###  Example
 
