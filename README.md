@@ -131,7 +131,7 @@ Lambda functions provide you with a short and concise way of representing small 
             decoration: BoxDecoration(color: Colors.white),
             child: makeListTile(assetViewModel), // where makeListTile is a custom widget created already
           ),
-    ;
+    );
 
 
  ```
