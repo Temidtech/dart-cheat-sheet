@@ -242,3 +242,35 @@ for (final fruit in fruits){
 }
 
  ```
+
+   ## Map 
+
+Map can either be declared using literals or map constructor. To learn more about map declaration using literals, please go to the Collections Literals section. Here is how you can declare map using a map comstructor:
+
+###  Example
+
+ ```dart
+var user = new Map();
+// To initialize the map, do this:
+user['firstName'] = 'Paul';
+user['lastName'] = 'Pogba';
+
+// Result: {firstName: Paul, lastName: Pogba}
+
+
+// Below are map properties
+
+- Keys
+- Values
+- Length
+- isEmpty
+- isNotEmpty
+
+// Below are map functions
+
+- addAll()
+- clear()
+- remove()
+- forEach()
+
+ ```
