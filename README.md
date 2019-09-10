@@ -135,3 +135,21 @@ Lambda functions provide you with a short and concise way of representing small 
 
 
  ```
+
+  ## Null-aware Operators
+
+Handling null exceptions in app developmeng is very essential, as this allows you to create a seamless experience for your app users. Dart provides you with some handy operators for dealing with values that might be null. One is the ??= assignment operator, which assigns a value of a variable only if that variable is currently null:
+
+###  Example
+
+ ```dart
+    int x; // The initial value of any object is null
+    x ??=6;
+    print(x); // result: 6
+
+    x ??=3;
+    print(x); // result is still 6
+
+    print(null ?? 10); // result: 10. Display the value on the left if it's not null else return the value on the right
+
+ ```
