@@ -206,3 +206,20 @@ final countrySet = <String>{};
 final credMap = <String, String>{};
 
  ```
+
+   ## Arrow Syntax
+
+ Remember Lambda Functions as discussed earlier in this sheet? We used a symbol => to define our lambda expression. You can check out Lambda function section for more explanation.
+
+###  Example
+
+ ```dart
+
+String _firstName = "Michael";
+String _lastName = "Jones";
+String _middleName = "Will";
+
+String get fullName => '$_firstName $_middleName $_lastName'; // result: 'Michael Will Jones'
+
+
+ ```
