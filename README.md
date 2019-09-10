@@ -11,6 +11,7 @@ A curated list of awesome stuff needed to get started with your flutter developm
 - [List Arrays](#list-arrays)
 - [Lambda Functions](#lambda-functions)
 - [Null-aware Operators](#null-aware-operators)
+- [Conditional Property Access](#conditional-property-access)
 - [Collections Literals](#collections-literals)
 - [Arrow Syntax](#arrow-syntax)
 - [Iterations](#iterations)
@@ -151,5 +152,28 @@ Handling null exceptions in app developmeng is very essential, as this allows yo
     print(x); // result is still 6
 
     print(null ?? 10); // result: 10. Display the value on the left if it's not null else return the value on the right
+
+ ```
+
+
+  ## Conditional Property Access
+
+To properly safegaurd access to a property or method of an object that might be null, put a question mark (?) before the (.)
+
+###  Example
+
+ ```dart
+
+    userObject?.userName
+
+    //The code snippet above is equivalent to following:
+
+    (userObject !=null) ? userObject.userName : null
+
+    //You can chain multiple uses of ?. together in a single expression
+
+    userObject?.userName?.toString()
+
+    // The preceeding code returns null and never calls toString() if either userObject or userObject.userName is null
 
  ```
