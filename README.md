@@ -105,3 +105,33 @@ Perhaps the most common collection in nearly every programming language is the a
     var emailList = new List<String>(); // instance of a list of type String
 
  ```
+
+ ## Lambda Functions
+
+Lambda functions provide you with a short and concise way of representing small functions. They are also referred to as Arrow functions. In dart, if you need to write quick throw away functions without necessarily naming them, lambda fucntion is all you need. With the power of this function you can do the following and more:
+
+###  Example
+
+ ```dart
+    var numList = new List<int>.generate(5,(i) => i);
+    print(numList); //result: {0,1,2,3,4}
+    var loans = numList.map( (n) => "\#$n").toList();
+    print(loans); // result: {#0, #1, #3, #4}
+
+    printMsg()=> print("Hello world");
+
+    // You can declare a state function this way in flutter
+     _DashboardState createState() => _DashboardState(); 
+
+    // How about creating a widget using lambda?
+    Card makeCard(Asset assetViewModel) => Card(
+          elevation: 8.0,
+          margin: new EdgeInsets.symmetric(horizontal: 10.0, vertical: 6.0),
+          child: Container(
+            decoration: BoxDecoration(color: Colors.white),
+            child: makeListTile(assetViewModel), // where makeListTile is a custom widget created already
+          ),
+    ;
+
+
+ ```
