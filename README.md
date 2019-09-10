@@ -42,7 +42,7 @@ Every language has it's own way of interpolating two ore more words or character
 
  ## Functions
 Dart lang is an OOL(Object-oriented language), In this language, functions are objects and have a type, Function. This implies that functions can be assigned to 
-variables or passed as args to other functions. Interestingly, you can also call an instance of a class as if it were a fuction. That's awesome right?
+variables or passed as args to other functions. Interestingly, you can also call an instance of a class as if it were a fuction. That's awesome, right?
 
 ###  Example
 
@@ -139,7 +139,7 @@ Lambda functions provide you with a short and concise way of representing small 
 
   ## Null-aware Operators
 
-Handling null exceptions in app developmeng is very essential, as this allows you to create a seamless experience for your app users. Dart provides you with some handy operators for dealing with values that might be null. One is the ??= assignment operator, which assigns a value of a variable only if that variable is currently null:
+Handling null exceptions in app development is very essential, as this allows you to create a seamless experience for your app users. Dart provides you with some handy operators for dealing with values that might be null. One is the ??= assignment operator, which assigns a value of a variable only if that variable is currently null:
 
 ###  Example
 
