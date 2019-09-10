@@ -177,3 +177,32 @@ To properly safegaurd access to a property or method of an object that might be 
     // The preceeding code returns null and never calls toString() if either userObject or userObject.userName is null
 
  ```
+
+   ## Collections Literals
+
+With literals you can create Dart's built-in lists, maps and sets without hassle.
+
+###  Example
+
+ ```dart
+
+final fruitList = ["Orange","Bannana","Carrot","Apple"]; // A list of fruit
+final countrySet = {"Nigeria","United States","Poland","Italy"}; // A set of country
+final credMap = {
+    'userName': 'temi',
+    'password': 'xmen'
+} // A map of user credentials
+
+ ```
+
+ You maybe wondering why we didn't explicitly declare a type for all of the collections above. It's interesting to know that dart's type inference can assign types to these variables for you. In this case, the inferred types are List<String>, Set<String> and Map<String,String>.
+
+ Please note that you can choose to specify a type for your variable declaration like this:
+
+  ```dart
+
+final fruitList = <String>[];
+final countrySet = <String>{};
+final credMap = <String, String>{};
+
+ ```
