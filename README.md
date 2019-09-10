@@ -272,5 +272,4 @@ user['lastName'] = 'Pogba';
 - clear()
 - remove()
 - forEach()
-
  ```
