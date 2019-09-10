@@ -223,3 +223,22 @@ String get fullName => '$_firstName $_middleName $_lastName'; // result: 'Michae
 
 
  ```
+
+  ## Iterations
+
+Just like every other programming language out there, you can perform iterations in dart. Here is a for loop example
+
+###  Example
+
+ ```dart
+
+for (int i=0; i<=20; i++){
+    print(i); // prints 1 to 20
+}
+
+var fruitList = ["Orange","Bannana","Carrot","Apple"];
+for (final fruit in fruits){
+    print(fruit); // prints all types of fruit in the list
+}
+
+ ```
