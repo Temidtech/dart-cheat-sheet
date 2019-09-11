@@ -273,3 +273,28 @@ user['lastName'] = 'Pogba';
 - remove()
 - forEach()
  ```
+
+   ## Variables
+
+Here's an example of creating a variable and initializing it:
+
+###  Example
+
+ ```dart
+int x = 2; // explicitly typed
+var p = 5; // type inferred
+p = "cool"; // ops! throws an error
+dynamic z = 8; // variable can take on any type
+z = "cool"; // cool
+
+// if you never intend to change a variable use final or const. Something like this:
+
+final email = "temid@gmail.com"; // you can't change the value
+final String email = "temid@gmail.com"; // you can't change the value
+
+// iPhone 11 Pro max calculator using const
+
+const qty = 5;
+const totalCost = 1099 * qty;
+
+ ```
