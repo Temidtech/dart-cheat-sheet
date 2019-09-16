@@ -298,3 +298,22 @@ const qty = 5;
 const totalCost = 1099 * qty;
 
  ```
+
+   ## Class
+
+In Dart, the class keyword is used to declare a class. Here is a basic example:
+
+###  Example
+
+ ```dart
+class Car {  
+   // field 
+   String engine = "E1001";  
+   
+   // function 
+   void disp() { 
+      print(engine); 
+   } 
+}
+
+ ```
