@@ -308,8 +308,7 @@ In Dart, the class keyword is used to declare a class. Here is a basic example:
  ```dart
 class Car {  
    // field 
-   String engine = "E1001";  
-   
+   String engine = "E1001"; 
    // function 
    void disp() { 
       print(engine); 
@@ -317,3 +316,57 @@ class Car {
 }
 
  ```
+
+   ## Getters and Setters
+
+Getters and setters are special methods that provide read and write access to an object’s properties. Each instance variable of your class has an implicit getter, and a setter if needed. In dart, you can take this even further by implementing your own getters and setters. If you've had any experience in Object-Oriented Programming you'll feel right at home. Here is a basic syntax for a class:
+
+###  Example
+
+ ```dart
+class className {
+ fields;
+ getters/setters
+ constructor
+ methods/functions
+}
+ ```
+
+```dart
+class Person {
+  String firstName;
+  String lastName;
+  double height;
+  int personAge;
+  int yearofBirth;
+  double weight;
+
+  int get age {
+    return personAge;
+  }
+
+  void set age(int currentYear) {
+    personAge = currentYear - yearofBirth;
+  }
+
+  // We can also eliminate the setter and just use a getter.
+  //int get age {
+  //  return DateTime.now().year - yearofBirth;
+  //}
+
+  Person({this.firstName,this.lastName,this.personAge,this.yearofBirth,this.weight});
+}
+ ```
+
+ We can implement Person class this way:
+
+```dart
+void main() {
+ Person person = Person(firstName:"Thanos",lastName:"Rednos",yearofBirth:1990,weight:200.5);
+  print(person.firstName); // output - Thanos
+  print(person.lastName); // output - Rednos
+  person.age = 2019;
+  print(person.age); // output - 29
+
+}
+```
