@@ -19,8 +19,6 @@ A curated list of awesome stuff needed to get started with your flutter developm
 - [Variables](#variables)
 - [Class](#class)
 - [Getters and Setters](#getters-and-setters)
-- [Optional Positional Parameters](#postional-parameters)
-- [Redirecting Constructors](#redirecting-constructors)
 - [Futures: Async and Await](#future-async-await)
 
 
