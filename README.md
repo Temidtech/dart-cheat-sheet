@@ -18,10 +18,10 @@ A curated list of awesome stuff needed to get started with your flutter developm
 - [Map](#map)
 - [Variables](#variables)
 - [Class](#class)
-- [Properties](#properties)
 - [Getters and Setters](#getters-and-setters)
 - [Optional Positional Parameters](#postional-parameters)
 - [Redirecting Constructors](#redirecting-constructors)
+- [Futures: Async and Await](#future-async-await)
 
 
 
@@ -370,3 +370,31 @@ void main() {
 
 }
 ```
+
+
+   ## Futures: Async and Await
+
+The async and await keywords provide a declarative way to define asynchronous functions and use their results. Remember these two basic guidelines when using async and await:
+
+- To define an async function, add async before the function body:
+- The await keyword works only in async functions.
+
+###  Example
+
+ ```dart
+Future<String> login() {
+  // Imagine that this function is
+  // more complex and slow.
+  String userName="Temidjoy";
+  return
+   Future.delayed(
+     Duration(seconds: 4), () => userName);
+}
+
+// Asynchronous
+main() async {
+  print('Authenticating please wait...');
+  print(await userName());
+}
+
+ ```
