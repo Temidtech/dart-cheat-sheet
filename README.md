@@ -20,6 +20,7 @@ A curated list of awesome stuff needed to get started with your flutter developm
 - [Class](#class)
 - [Getters and Setters](#getters-and-setters)
 - [Futures: Async and Await](#future-async-await)
+- [JSON and serialization](#json-and-serialization)
 
 
 
@@ -396,3 +397,19 @@ main() async {
 }
 
  ```
+
+   ## JSON and serialization
+
+Most mobile and web apps use JSON for tasks such as exchanging data with a web server. With Dart support for JSON serialization and deserialization: converting Dart objects to and from JSON, data exchange is made easy in flutter development.
+
+The following libraries and packages are useful across Dart platform:
+
+- [dart:convert](https://dart.dev/guides/libraries/library-tour#dartconvert---decoding-and-encoding-json-utf-8-and-more)
+   Converters for both JSON and UTF-8 (the character encoding that JSON requires).
+- [package:json_serializable](https://pub.dev/packages/json_serializable)
+   An easy-to-use code generation package. When you add some metadata annotations and use the builder provided by this package, the Dart build system generates serialization and deserialization code for you.
+- [package:built_value](https://pub.dev/packages/built_value)
+   A powerful, opinionated alternative to json_serializable.
+
+
+You need to serialize and deserialize JSON in your Flutter project? [see this example](https://flutter.dev/docs/development/data-and-backend/json) to quickly get started.
