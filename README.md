@@ -21,6 +21,7 @@ A curated list of awesome stuff needed to get started with your flutter developm
 - [Getters and Setters](#getters-and-setters)
 - [Futures: Async and Await](#future-async-await)
 - [JSON and serialization](#json-and-serialization)
+- [Reading and decoding a file](#Reading-and-decoding-a-file)
 
 
 
@@ -413,3 +414,27 @@ The following libraries and packages are useful across Dart platform:
 
 
 You need to serialize and deserialize JSON in your Flutter project? [see this example](https://flutter.dev/docs/development/data-and-backend/json) to quickly get started.
+
+
+
+   ## Reading and decoding a file
+
+The code snippet below reads a file and runs two transforms over the stream. It first converts the data from UTF8 and then runs it through a LineSplitter. All lines are printed, except any that begin with a hashtag, #.
+
+###  Example
+
+ ```dart
+import 'dart:convert';
+import 'dart:io';
+
+Future<void> main(List<String> args) async {
+  var file = File(args[0]);
+  var lines = utf8.decoder
+      .bind(file.openRead())
+      .transform(LineSplitter());
+  await for (var line in lines) {
+    if (!line.startsWith('#')) print(line);
+  }
+}
+
+ ```
