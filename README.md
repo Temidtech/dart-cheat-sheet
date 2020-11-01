@@ -1,29 +1,30 @@
 # dart-cheat-sheet
+
 A curated list of awesome stuff needed to get started with your flutter development journey
 
-[![Awesome](https://cdn.rawgit.com/sindresorhus/awesome/d7305f38d29fed78fa85652e3a63e154dd8e8829/media/badge.svg)](https://github.com/sindresorhus/awesome) ![Branch master](https://img.shields.io/badge/branch-master-brightgreen.svg?style=flat-square)[![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)](https://raw.githubusercontent.com/temidtech/dart-cheat-sheet/master/LICENSE)
+[![Awesome](https://cdn.rawgit.com/sindresorhus/awesome/d7305f38d29fed78fa85652e3a63e154dd8e8829/media/badge.svg)](https://github.com/sindresorhus/awesome) 
+
+![Branch master](https://img.shields.io/badge/branch-master-brightgreen.svg?style=flat-square)[![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)](https://raw.githubusercontent.com/temidtech/dart-cheat-sheet/master/LICENSE)
 
  ## Table of Contents
 
-- [String interpolation](#string-interpolation)
-- [Functions](#functions)
-- [Parsing](#parsing)
-- [List Arrays](#list-arrays)
-- [Lambda Functions](#lambda-functions)
-- [Null-aware Operators](#null-aware-operators)
-- [Conditional Property Access](#conditional-property-access)
-- [Collections Literals](#collections-literals)
-- [Arrow Syntax](#arrow-syntax)
-- [Iterations](#iterations)
-- [Map](#map)
-- [Variables](#variables)
-- [Class](#class)
-- [Getters and Setters](#getters-and-setters)
-- [Futures: Async and Await](#future-async-await)
-- [JSON and serialization](#json-and-serialization)
-- [Reading and decoding a file](#Reading-and-decoding-a-file)
-
-
+* [String interpolation](#string-interpolation)
+* [Functions](#functions)
+* [Parsing](#parsing)
+* [List Arrays](#list-arrays)
+* [Lambda Functions](#lambda-functions)
+* [Null-aware Operators](#null-aware-operators)
+* [Conditional Property Access](#conditional-property-access)
+* [Collections Literals](#collections-literals)
+* [Arrow Syntax](#arrow-syntax)
+* [Iterations](#iterations)
+* [Map](#map)
+* [Variables](#variables)
+* [Class](#class)
+* [Getters and Setters](#getters-and-setters)
+* [Futures: Async and Await](#future-async-await)
+* [JSON and serialization](#json-and-serialization)
+* [Reading and decoding a file](#Reading-and-decoding-a-file)
 
 ## String interpolation
 
@@ -31,7 +32,9 @@ Every language has it's own way of interpolating two ore more words or character
 
 ###  Example
 
- ```dart
+ 
+
+``` dart
     int x=6;
     int y=2;
     String sum = '${x+y}';          // result is 8
@@ -46,7 +49,9 @@ variables or passed as args to other functions. Interestingly, you can also call
 
 ###  Example
 
- ```dart
+ 
+
+``` dart
     String fullName(){
         String firstName = "Temidayo";
         String lastName = "Adefioye";
@@ -54,7 +59,9 @@ variables or passed as args to other functions. Interestingly, you can also call
     }
  ```
 
- ```dart
+ 
+
+``` dart
     int length(String text){
         return text.length; // returns length of text
     }
@@ -62,7 +69,9 @@ variables or passed as args to other functions. Interestingly, you can also call
 
  The above function can be rewritten in a more concise way:
 
-  ```dart
+  
+
+``` dart
     int length(String text) => return text.length; // returns length of text
  ```
 
@@ -75,7 +84,9 @@ coming from a server-side to a number, tryParse method comes in handy. Take a lo
 
 ###  Example
 
- ```dart
+ 
+
+``` dart
     var a = "121";
     var b = "120.56";
     var c = "100.a12";         
@@ -92,7 +103,9 @@ Perhaps the most common collection in nearly every programming language is the a
 
 ###  Example
 
- ```dart
+ 
+
+``` dart
     var numList = [1,2,3,5,6,7];
     var countryList = ["Nigeria","United States","United Kingdom","Ghana","IreLand","Germany"];
     String numLength = numList.length; // result is 6
@@ -113,7 +126,9 @@ Lambda functions provide you with a short and concise way of representing small 
 
 ###  Example
 
- ```dart
+ 
+
+``` dart
     var numList = new List<int>.generate(5,(i) => i);
     print(numList); //result: {0,1,2,3,4}
     var loans = numList.map( (n) => "\#$n").toList();
@@ -134,7 +149,6 @@ Lambda functions provide you with a short and concise way of representing small 
           ),
     );
 
-
  ```
 
   ## Null-aware Operators
@@ -143,7 +157,9 @@ Handling null exceptions in app development is very essential, as this allows yo
 
 ###  Example
 
- ```dart
+ 
+
+``` dart
     int x; // The initial value of any object is null
     x ??=6;
     print(x); // result: 6
@@ -155,14 +171,15 @@ Handling null exceptions in app development is very essential, as this allows yo
 
  ```
 
-
   ## Conditional Property Access
 
 To properly safegaurd access to a property or method of an object that might be null, put a question mark (?) before the (.)
 
 ###  Example
 
- ```dart
+ 
+
+``` dart
 
     userObject?.userName
 
@@ -184,7 +201,9 @@ With literals you can create Dart's built-in lists, maps and sets without hassle
 
 ###  Example
 
- ```dart
+ 
+
+``` dart
 
 final fruitList = ["Orange","Bannana","Carrot","Apple"]; // A list of fruit
 final countrySet = {"Nigeria","United States","Poland","Italy"}; // A set of country
@@ -195,11 +214,13 @@ final credMap = {
 
  ```
 
- You maybe wondering why we didn't explicitly declare a type for all of the collections above. It's interesting to know that dart's type inference can assign types to these variables for you. In this case, the inferred types are List<String>, Set<String> and Map<String,String>.
+ You maybe wondering why we didn't explicitly declare a type for all of the collections above. It's interesting to know that dart's type inference can assign types to these variables for you. In this case, the inferred types are List<String>, Set<String> and Map<String, String>.
 
  Please note that you can choose to specify a type for your variable declaration like this:
 
-  ```dart
+  
+
+``` dart
 
 final fruitList = <String>[];
 final countrySet = <String>{};
@@ -213,14 +234,15 @@ final credMap = <String, String>{};
 
 ###  Example
 
- ```dart
+ 
+
+``` dart
 
 String _firstName = "Michael";
 String _lastName = "Jones";
 String _middleName = "Will";
 
 String get fullName => '$_firstName $_middleName $_lastName'; // result: 'Michael Will Jones'
-
 
  ```
 
@@ -230,7 +252,9 @@ Just like every other programming language out there, you can perform iterations
 
 ###  Example
 
- ```dart
+ 
+
+``` dart
 
 for (int i=0; i<=20; i++){
     print(i); // prints 1 to 20
@@ -249,7 +273,9 @@ Map can either be declared using literals or map constructor. To learn more abou
 
 ###  Example
 
- ```dart
+ 
+
+``` dart
 var user = new Map();
 // To initialize the map, do this:
 user['firstName'] = 'Paul';
@@ -257,21 +283,21 @@ user['lastName'] = 'Pogba';
 
 // Result: {firstName: Paul, lastName: Pogba}
 
-
 // Below are map properties
 
-- Keys
-- Values
-- Length
-- isEmpty
-- isNotEmpty
+* Keys
+* Values
+* Length
+* isEmpty
+* isNotEmpty
 
 // Below are map functions
 
-- addAll()
-- clear()
-- remove()
-- forEach()
+* addAll()
+* clear()
+* remove()
+* forEach()
+
  ```
 
    ## Variables
@@ -280,7 +306,9 @@ Here's an example of creating a variable and initializing it:
 
 ###  Example
 
- ```dart
+ 
+
+``` dart
 int x = 2; // explicitly typed
 var p = 5; // type inferred
 p = "cool"; // ops! throws an error
@@ -305,7 +333,9 @@ In Dart, the class keyword is used to declare a class. Here is a basic example:
 
 ###  Example
 
- ```dart
+ 
+
+``` dart
 class Car {  
    // field 
    String engine = "E1001"; 
@@ -323,7 +353,9 @@ Getters and setters are special methods that provide read and write access to an
 
 ###  Example
 
- ```dart
+ 
+
+``` dart
 class className {
  fields;
  getters/setters
@@ -332,7 +364,7 @@ class className {
 }
  ```
 
-```dart
+``` dart
 class Person {
   String firstName;
   String lastName;
@@ -360,7 +392,7 @@ class Person {
 
  We can implement Person class this way:
 
-```dart
+``` dart
 void main() {
  Person person = Person(firstName:"Thanos",lastName:"Rednos",yearofBirth:1990,weight:200.5);
   print(person.firstName); // output - Thanos
@@ -371,17 +403,18 @@ void main() {
 }
 ```
 
-
    ## Futures: Async and Await
 
 The async and await keywords provide a declarative way to define asynchronous functions and use their results. Remember these two basic guidelines when using async and await:
 
-- To define an async function, add async before the function body:
-- The await keyword works only in async functions.
+* To define an async function, add async before the function body:
+* The await keyword works only in async functions.
 
 ###  Example
 
- ```dart
+ 
+
+``` dart
 Future<String> login() {
   // Imagine that this function is
   // more complex and slow.
@@ -405,17 +438,19 @@ Most mobile and web apps use JSON for tasks such as exchanging data with a web s
 
 The following libraries and packages are useful across Dart platform:
 
-- [dart:convert](https://dart.dev/guides/libraries/library-tour#dartconvert---decoding-and-encoding-json-utf-8-and-more)
+* [dart:convert](https://dart.dev/guides/libraries/library-tour#dartconvert---decoding-and-encoding-json-utf-8-and-more)
+
    Converters for both JSON and UTF-8 (the character encoding that JSON requires).
-- [package:json_serializable](https://pub.dev/packages/json_serializable)
+
+* [package:json_serializable](https://pub.dev/packages/json_serializable)
+
    An easy-to-use code generation package. When you add some metadata annotations and use the builder provided by this package, the Dart build system generates serialization and deserialization code for you.
-- [package:built_value](https://pub.dev/packages/built_value)
+
+* [package:built_value](https://pub.dev/packages/built_value)
+
    A powerful, opinionated alternative to json_serializable.
 
-
 You need to serialize and deserialize JSON in your Flutter project? [see this example](https://flutter.dev/docs/development/data-and-backend/json) to quickly get started.
-
-
 
    ## Reading and decoding a file
 
@@ -423,7 +458,9 @@ The code snippet below reads a file and runs two transforms over the stream. It 
 
 ###  Example
 
- ```dart
+ 
+
+``` dart
 import 'dart:convert';
 import 'dart:io';
 
