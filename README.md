@@ -80,10 +80,10 @@ coming from a server-side to a number, tryParse method comes in handy. Take a lo
     var b = "120.56";
     var c = "100.a12";         
     var d = "abc";
-    String parseA = int.tryParse(a); // result is 121
-    String parseB = double.tryParse(b); // result is 120.56
-    String parseC = double.tryParse(c); // result is null (that string contains invalid number)
-    String parseD = double.tryParse(d); // result is null (that string contains invalid number)
+    int parseA = int.tryParse(a); // result is 121
+    double parseB = double.tryParse(b); // result is 120.56
+    double parseC = double.tryParse(c); // result is null (that string contains invalid number)
+    double parseD = double.tryParse(d); // result is null (that string contains invalid number)
  ```
 
   ## List Arrays
