@@ -245,7 +245,7 @@ for (final fruit in fruits){
 
    ## Map 
 
-Map can either be declared using literals or map constructor. To learn more about map declaration using literals, please go to the Collections Literals section. Here is how you can declare map using a map comstructor:
+Map can either be declared using literals or map constructor. To learn more about map declaration using literals, please go to the Collections Literals section. Here is how you can declare map using a map constructor:
 
 ###  Example
 
