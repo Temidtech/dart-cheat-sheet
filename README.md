@@ -22,6 +22,7 @@ A curated list of awesome stuff needed to get started with your flutter developm
 - [Futures: Async and Await](#future-async-await)
 - [JSON and serialization](#json-and-serialization)
 - [Reading and decoding a file](#Reading-and-decoding-a-file)
+- [Sound null safety](#sound-null-safety)
 
 
 
@@ -417,7 +418,7 @@ You need to serialize and deserialize JSON in your Flutter project? [see this ex
 
 
 
-   ## Reading and decoding a file
+## Reading and decoding a file
 
 The code snippet below reads a file and runs two transforms over the stream. It first converts the data from UTF8 and then runs it through a LineSplitter. All lines are printed, except any that begin with a hashtag, #.
 
@@ -438,3 +439,34 @@ Future<void> main(List<String> args) async {
 }
 
  ```
+
+## Sound null safety
+Sound null safety is now supported by the Dart language!
+
+When you choose to use null safety, types in your code are by default non-nullable, which means variables cannot contain null unless you explicitly allow it. Your runtime null-dereference mistakes become edit-time analysis errors with null safety.
+
+The variables in the following code are all non-nullable thanks to null safety:
+
+
+ ```dart
+// None of these can ever be null in null-safe Dart.
+var x = 81; // Inferred to be an int.
+String address = getAddress();
+final c = Car();
+
+ ```
+
+ Simply add ? to a variable's type declaration to indicate that it might be null:
+
+  ```dart
+// This is now a nullable Int.
+int? x = null;
+
+ ```
+
+###  Enabling null safety
+
+Sound null safety is available in Dart 2.12 and Flutter 2.
+
+### Migrating an existing package or app
+For instructions on how to migrate your code to null safety, see the [migration guide](https://dart.dev/null-safety/migration-guide).
